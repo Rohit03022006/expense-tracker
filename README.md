@@ -249,11 +249,13 @@ npm run dev
 | **Register** | ![Register](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/register.png) |
 | **Login** | ![Login](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/login.png) |
 | **Dashboard** | ![Dashboard](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/dashboard.png) |
-| **Expenses/Transactions** | ![Expenses]() |
-| **Categories** | ![Categories](./screenshots/categories.png) |
-| **Budgets** | ![Budgets](./screenshots/budgets.png) |
-| **Reports** | ![Reports](./screenshots/reports.png) |
-| **Profile** | ![Profile](./screenshots/profile.png) |
+| **Expenses/Transactions** | ![Expenses](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/expenses.png) |
+| **Categories** | ![Categories](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/categories.png) |
+| **Budgets** | ![Budgets](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/budgets.png) |
+| **Reports** | ![Reports](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/reports.png) |
+| **Profile** | ![Profile](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/profile.png) |
+| **Data(PDF)** | ![Data](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/expenses.pdf) |
+| **Data(CSV)** | ![Data](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/expenses.csv) |
 
 ## Troubleshooting
 
