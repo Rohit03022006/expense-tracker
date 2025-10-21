@@ -246,10 +246,10 @@ npm run dev
 | Feature | Screenshot |
 |---------|-----------|
 | **Landing Page** | ![Landing Page](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/base.png) |
-| **Register** | ![Register](./screenshots/register.png) |
-| **Login** | ![Login](./screenshots/login.png) |
-| **Dashboard** | ![Dashboard](./screenshots/dashboard.png) |
-| **Expenses/Transactions** | ![Expenses](./screenshots/expenses.png) |
+| **Register** | ![Register](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/register.png) |
+| **Login** | ![Login](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/login.png) |
+| **Dashboard** | ![Dashboard](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/dashboard.png) |
+| **Expenses/Transactions** | ![Expenses]() |
 | **Categories** | ![Categories](./screenshots/categories.png) |
 | **Budgets** | ![Budgets](./screenshots/budgets.png) |
 | **Reports** | ![Reports](./screenshots/reports.png) |
