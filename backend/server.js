@@ -21,8 +21,8 @@ const corsOptions = {
     if (!origin) return callback(null, true);
     
     const allowedOrigins = [
-      'http://localhost:3000',
-      'http://127.0.0.1:3000',
+      'http://localhost:5173',
+      'http://127.0.0.1:5173',
       process.env.FRONTEND_URL
     ].filter(Boolean); 
     
@@ -74,7 +74,7 @@ app.get('/api/health', (req, res) => {
     database: mongoose.connection.readyState === 1 ? 'Connected' : 'Disconnected',
     cors: {
       frontendUrl: process.env.FRONTEND_URL,
-      allowedOrigins: ['http://localhost:3000', 'http://127.0.0.1:3000']
+      allowedOrigins: ['http://localhost:5173', 'http://127.0.0.1:5173']
     }
   });
 });
