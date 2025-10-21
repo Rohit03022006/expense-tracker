@@ -127,7 +127,7 @@ Backend will run on: http://localhost:5000
 cd frontend
 npm run dev
 ```
-Frontend will run on: http://localhost:3000
+Frontend will run on: http://localhost:5173
 
 ### Option 2: Run Both Concurrently (from root folder)
 
@@ -303,11 +303,11 @@ rm -rf node_modules package-lock.json
 npm install
 ```
 
-**Problem: "Port 3000 already in use"**
+**Problem: "Port 5173 already in use"**
 ```bash
 # Solution: Kill the process or use different port
-# Windows: netstat -ano | findstr :3000
-# Mac/Linux: lsof -ti:3000 | xargs kill
+# Windows: netstat -ano | findstr :5173
+# Mac/Linux: lsof -ti:5173 | xargs kill
 ```
 
 ### Common Issues
