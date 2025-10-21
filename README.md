@@ -245,7 +245,7 @@ npm run dev
 
 | Feature | Screenshot |
 |---------|-----------|
-| **Landing Page** | ![Landing Page](./screenshots/base.png) |
+| **Landing Page** | ![Landing Page](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/base.png) |
 | **Register** | ![Register](./screenshots/register.png) |
 | **Login** | ![Login](./screenshots/login.png) |
 | **Dashboard** | ![Dashboard](./screenshots/dashboard.png) |
