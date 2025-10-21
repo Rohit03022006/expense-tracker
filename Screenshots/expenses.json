@@ -1,0 +1,234 @@
+{
+  "exportInfo": {
+    "version": "2.0",
+    "exportType": "json",
+    "theme": "default",
+    "generatedAt": "2025-10-17 01:16:38",
+    "recordCount": 12
+  },
+  "summary": {
+    "totalIncome": 80000,
+    "totalExpenses": 13510,
+    "netAmount": 66490,
+    "totalRecords": 12
+  },
+  "filters": {},
+  "data": [
+    {
+      "_id": "68f13980fecd82e89c8d2e7f",
+      "amount": 500,
+      "description": "fee",
+      "category": {
+        "_id": "68e759aa25afc3293d0c6ac3",
+        "name": "Bills & Utilities",
+        "type": "expense",
+        "color": "#84CC16"
+      },
+      "date": "2025-11-16",
+      "type": "expense",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-16 23:59:20",
+      "updatedAt": "2025-10-16 23:59:20",
+      "__v": 0
+    },
+    {
+      "_id": "68e7b4bf32073199fc905897",
+      "amount": 10,
+      "description": "just fun",
+      "category": {
+        "_id": "68e759b125afc3293d0c6ac8",
+        "name": "Entertainment",
+        "type": "expense",
+        "color": "#EC4899"
+      },
+      "date": "2025-10-14",
+      "type": "expense",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-09 18:42:31",
+      "updatedAt": "2025-10-09 18:51:28",
+      "__v": 0
+    },
+    {
+      "_id": "68e75aa625afc3293d0c6bcc",
+      "amount": 3000,
+      "description": "Clothes Shopping",
+      "category": {
+        "_id": "68e7599f25afc3293d0c6abe",
+        "name": "Shopping",
+        "type": "expense",
+        "color": "#8B5CF6"
+      },
+      "date": "2025-10-11",
+      "type": "expense",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-09 12:18:06",
+      "updatedAt": "2025-10-09 12:28:24",
+      "__v": 0
+    },
+    {
+      "_id": "68ea1b95a5be8ebe3a65b779",
+      "amount": 500,
+      "description": "Clothes Shopping",
+      "category": {
+        "_id": "68e7599f25afc3293d0c6abe",
+        "name": "Shopping",
+        "type": "expense",
+        "color": "#8B5CF6"
+      },
+      "date": "2025-10-11",
+      "type": "expense",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-11 14:25:49",
+      "updatedAt": "2025-10-11 14:25:49",
+      "__v": 0
+    },
+    {
+      "_id": "68e75aba25afc3293d0c6bda",
+      "amount": 1000,
+      "description": "Movie & Dinner",
+      "category": {
+        "_id": "68e759b125afc3293d0c6ac8",
+        "name": "Entertainment",
+        "type": "expense",
+        "color": "#EC4899"
+      },
+      "date": "2025-10-10",
+      "type": "expense",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-09 12:18:26",
+      "updatedAt": "2025-10-09 12:23:08",
+      "__v": 0
+    },
+    {
+      "_id": "68e7aa82f6ffc8f572dc3a47",
+      "amount": 5000,
+      "description": "Create website",
+      "category": {
+        "_id": "68e759d525afc3293d0c6ad7",
+        "name": "Freelance",
+        "type": "income",
+        "color": "#3B82F6"
+      },
+      "date": "2025-10-10",
+      "type": "income",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-09 17:58:50",
+      "updatedAt": "2025-10-09 17:58:50",
+      "__v": 0
+    },
+    {
+      "_id": "68e75a1825afc3293d0c6b30",
+      "amount": 50000,
+      "description": "Monthly Salary",
+      "category": {
+        "_id": "68e759c025afc3293d0c6acd",
+        "name": "Salary",
+        "type": "income",
+        "color": "#10B981"
+      },
+      "date": "2025-10-09",
+      "type": "income",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-09 12:15:44",
+      "updatedAt": "2025-10-09 12:15:44",
+      "__v": 0
+    },
+    {
+      "_id": "68e75a2925afc3293d0c6b3e",
+      "amount": 15000,
+      "description": "Freelance Project",
+      "category": {
+        "_id": "68e759d525afc3293d0c6ad7",
+        "name": "Freelance",
+        "type": "income",
+        "color": "#3B82F6"
+      },
+      "date": "2025-10-09",
+      "type": "income",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-09 12:16:01",
+      "updatedAt": "2025-10-09 12:16:01",
+      "__v": 0
+    },
+    {
+      "_id": "68e75a3c25afc3293d0c6b4c",
+      "amount": 10000,
+      "description": "Performance Bonus",
+      "category": {
+        "_id": "68e759e825afc3293d0c6adc",
+        "name": "Bonus",
+        "type": "income",
+        "color": "#F97316"
+      },
+      "date": "2025-10-09",
+      "type": "income",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-09 12:16:20",
+      "updatedAt": "2025-10-09 12:16:20",
+      "__v": 0
+    },
+    {
+      "_id": "68e75a4c25afc3293d0c6b5a",
+      "amount": 5000,
+      "description": "Grocery Shopping",
+      "category": {
+        "_id": "68e7599025afc3293d0c6ab4",
+        "name": "Food & Dining",
+        "type": "expense",
+        "color": "#EF4444"
+      },
+      "date": "2025-10-09",
+      "type": "expense",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-09 12:16:36",
+      "updatedAt": "2025-10-09 12:16:36",
+      "__v": 0
+    },
+    {
+      "_id": "68e75a8125afc3293d0c6bb0",
+      "amount": 2000,
+      "description": "Electricity Bill",
+      "category": {
+        "_id": "68e759aa25afc3293d0c6ac3",
+        "name": "Bills & Utilities",
+        "type": "expense",
+        "color": "#84CC16"
+      },
+      "date": "2025-10-09",
+      "type": "expense",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-09 12:17:29",
+      "updatedAt": "2025-10-09 12:17:29",
+      "__v": 0
+    },
+    {
+      "_id": "68e75a9025afc3293d0c6bbe",
+      "amount": 1500,
+      "description": "Uber Rides",
+      "category": {
+        "_id": "68e7599925afc3293d0c6ab9",
+        "name": "Transportation",
+        "type": "expense",
+        "color": "#3B82F6"
+      },
+      "date": "2025-10-09",
+      "type": "expense",
+      "user": "68e75576e51d5965971ba085",
+      "tags": [],
+      "createdAt": "2025-10-09 12:17:44",
+      "updatedAt": "2025-10-09 12:23:13",
+      "__v": 0
+    }
+  ]
+}

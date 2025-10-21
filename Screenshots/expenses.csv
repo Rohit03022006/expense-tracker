@@ -1,0 +1,20 @@
+EXPENSE TRACKER EXPORT - October 17th 2025, 1:16:24 AM
+Total Records: 12
+Total Income: $80000.00
+Total Expenses: $13510.00
+Net Amount: $66490.00
+
+TRANSACTION DATA:
+"Date","Description","Category","Type","Amount","Amount Formatted","Tags","Created At"
+"2025-11-16","fee","Bills & Utilities","Expense",500,"-$500.00","","2025-10-16 23:59:20"
+"2025-10-14","just fun","Entertainment","Expense",10,"-$10.00","","2025-10-09 18:42:31"
+"2025-10-11","Clothes Shopping","Shopping","Expense",3000,"-$3000.00","","2025-10-09 12:18:06"
+"2025-10-11","Clothes Shopping","Shopping","Expense",500,"-$500.00","","2025-10-11 14:25:49"
+"2025-10-10","Movie & Dinner","Entertainment","Expense",1000,"-$1000.00","","2025-10-09 12:18:26"
+"2025-10-10","Create website","Freelance","Income",5000,"$5000.00","","2025-10-09 17:58:50"
+"2025-10-09","Monthly Salary","Salary","Income",50000,"$50000.00","","2025-10-09 12:15:44"
+"2025-10-09","Freelance Project","Freelance","Income",15000,"$15000.00","","2025-10-09 12:16:01"
+"2025-10-09","Performance Bonus","Bonus","Income",10000,"$10000.00","","2025-10-09 12:16:20"
+"2025-10-09","Grocery Shopping","Food & Dining","Expense",5000,"-$5000.00","","2025-10-09 12:16:36"
+"2025-10-09","Electricity Bill","Bills & Utilities","Expense",2000,"-$2000.00","","2025-10-09 12:17:29"
+"2025-10-09","Uber Rides","Transportation","Expense",1500,"-$1500.00","","2025-10-09 12:17:44"

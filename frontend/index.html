@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ✅ Basic Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker | Manage Your Income & Expenses Easily</title>
+    <meta name="description" content="Track your daily income, expenses, and savings with the Expense Tracker. Simple, fast, and designed to help you manage your budget efficiently." />
+    <meta name="keywords" content="expense tracker, budget planner, personal finance, income management, savings tracker, finance app" />
+    <meta name="author" content="Rohit Kumar" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                background: '#F8FAFC',
+                card: '#FFFFFF',
+                text: '#1E293B',
+                textSecondary: '#64748B',
+                border: '#E2E8F0'
+              },
+              accent: {
+                income: '#16A34A',
+                expense: '#DC2626',
+                warning: '#F59E0B',
+                info: '#0EA5E9'
+              },
+              button: {
+                primary: '#0EA5E9',
+                secondary: '#E2E8F0'
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: #F8FAFC;
+        color: #1E293B;
+        line-height: 1.6;
+      }
+      .loading-spinner {
+        border: 2px solid #E2E8F0;
+        border-top: 2px solid #0EA5E9;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+    <meta name="robots" content="index, follow" />
+  </head>
+  
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

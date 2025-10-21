@@ -1,0 +1,33 @@
+Authentication Routes
+POST /api/auth/register     - User registration
+POST /api/auth/login        - User login
+POST /api/auth/logout       - User logout
+GET  /api/auth/me           - Get current user
+PUT  /api/auth/profile      - Update user profile
+
+Expense Routes
+GET    /api/expenses        - Get all expenses (with filters)
+POST   /api/expenses        - Create new expense
+GET    /api/expenses/:id    - Get single expense
+PUT    /api/expenses/:id    - Update expense
+DELETE /api/expenses/:id    - Delete expense
+GET    /api/expenses/stats  - Get expense statistics
+
+Category Routes
+GET    /api/categories      - Get all categories
+POST   /api/categories      - Create category
+PUT    /api/categories/:id  - Update category
+DELETE /api/categories/:id  - Delete category
+
+Budget Routes
+GET    /api/budgets         - Get all budgets
+POST   /api/budgets         - Create budget
+PUT    /api/budgets/:id     - Update budget
+DELETE /api/budgets/:id     - Delete budget
+GET    /api/budgets/current - Get current month budget
+
+Export
+GET /api/export/expenses/csv - Export to CSV
+GET /api/export/expenses/json - Export to JSON
+GET /api/export/expenses/pdf - Export to PDF
+GET /api/export/backup - Full backup
