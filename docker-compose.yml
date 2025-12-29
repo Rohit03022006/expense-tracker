@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    image: rohitxten/expense-backend
+    container_name: expense_backend
+    env_file:
+      - ./backend/.env
+    ports:
+      - "5000:5000"
+    restart: always
+    networks:
+      - expense_net
+
+  frontend:
+    build: ./frontend
+    image: rohitxten/expense-frontend
+    container_name: expense_frontend
+    env_file:
+      - ./frontend/.env
+    ports:
+      - "5173:80"
+    depends_on:
+      - backend
+    networks:
+      - expense_net
+
+networks:
+  expense_net:
+    driver: bridge
