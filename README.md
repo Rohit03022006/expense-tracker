@@ -1,39 +1,37 @@
-# ExpenseTracker – Personal Finance Management App
+# ExpenseTracker – Personal Finance Management Application  
+**(CI/CD Enabled | Secure | Containerized | Production-Ready)**
 
-**(CI/CD Enabled • Secure • Containerized • Production-Ready)**
-
-ExpenseTracker is a **full-stack personal finance management application** that helps users track income, expenses, budgets, and generate detailed financial reports.
-The project follows **modern DevOps practices** with **CI/CD automation, code quality analysis, and security scanning**.
+ExpenseTracker is a full-stack personal finance management application designed to help users track income, expenses, budgets, and generate detailed financial reports. The project follows modern DevOps practices with integrated CI/CD automation, code quality analysis, and security scanning.
 
 ---
 
 ## Key Highlights
 
-* Automated **CI/CD pipeline using Jenkins**
-* **SonarQube** for static code analysis & Quality Gates
-* **Trivy** for file system & Docker image vulnerability scanning
-* Fully **Dockerized frontend & backend**
-* Secure **MongoDB Atlas** integration
-* Docker images published to **Docker Hub**
+* Automated CI/CD pipeline using Jenkins
+* SonarQube integration for static code analysis and Quality Gates
+* Trivy for vulnerability scanning of file systems and Docker images
+* Fully Dockerized frontend and backend
+* Secure integration with MongoDB Atlas
+* Docker images published to Docker Hub
 * Security-first DevOps workflow
 
 ---
 
 ## Features
 
-* **User Authentication** – Secure login & registration (JWT)
-* **Dashboard** – Income, expenses & savings overview
-* **Transaction Management** – CRUD operations
-* **Categories** – Custom expense/income categories
-* **Budgets** – Monthly budget tracking
-* **Reports** – Charts & analytics
-* **Export Data** – CSV, JSON, PDF
+* **User Authentication** – Secure login and registration using JSON Web Tokens (JWT)
+* **Dashboard** – Overview of income, expenses, and savings
+* **Transaction Management** – Full CRUD operations for transactions
+* **Categories** – Customizable expense and income categories
+* **Budgets** – Monthly budget tracking with alerts
+* **Reports** – Charts and financial analytics
+* **Data Export** – Export data in CSV, JSON, and PDF formats
 * **Multi-Currency Support**
-* **Responsive UI**
+* **Responsive User Interface**
 
 ---
 
-## Tech Stack
+## Technology Stack
 
 ### Frontend
 
@@ -48,38 +46,38 @@ The project follows **modern DevOps practices** with **CI/CD automation, code qu
 
 * Node.js
 * Express.js
-* MongoDB (Atlas)
+* MongoDB Atlas
 * Mongoose
 * JWT Authentication
 * bcryptjs
 * PDFKit
 
-### DevOps & CI/CD
+### DevOps and CI/CD
 
 * **Jenkins** – CI/CD automation
-* **Docker & Docker Compose**
-* **SonarQube** – Code Quality & Quality Gate
-* **Trivy** – Vulnerability Scanning
-* **OWASP Dependency-Check**
-* **Docker Hub** – Image Registry
+* **Docker & Docker Compose** – Containerization
+* **SonarQube** – Code quality analysis and Quality Gates
+* **Trivy** – Vulnerability scanning
+* **OWASP Dependency-Check** – Dependency vulnerability detection
+* **Docker Hub** – Image registry
 
 ---
 
 ## CI/CD Pipeline Overview
 
-The Jenkins pipeline automates the **complete application lifecycle**:
+The Jenkins pipeline automates the complete application lifecycle through the following stages:
 
 ### Pipeline Stages
 
-1. **Clone Repository**
-2. **SonarQube Code Analysis**
-3. **Sonar Quality Gate Enforcement**
-4. **OWASP Dependency Check**
-5. **Trivy File System Scan**
-6. **Build Docker Images**
-7. **Push Images to Docker Hub**
-8. **Trivy Docker Image Scan**
-9. **Deploy Application using Docker**
+1. **Clone Repository** – Retrieve source code from version control
+2. **SonarQube Code Analysis** – Static code quality scanning
+3. **Sonar Quality Gate Enforcement** – Enforce quality standards
+4. **OWASP Dependency Check** – Scan for vulnerable dependencies
+5. **Trivy File System Scan** – Vulnerability scanning of source files
+6. **Build Docker Images** – Create frontend and backend Docker images
+7. **Push Images to Docker Hub** – Publish images to registry
+8. **Trivy Docker Image Scan** – Vulnerability scanning of built images
+9. **Deploy Application using Docker** – Automated deployment
 
 ---
 
@@ -94,21 +92,23 @@ Jenkins Pipeline
    ├── Trivy FS Scan
    ├── Docker Build
    ├── Trivy Image Scan
-   └── Docker Deployment
+   ├── Docker Deployment
+   └── Nginx
 ```
-![WorkFlow](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/WorkFlow.png) |
+![WorkFlow](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/WorkFlow.png)
 
 ---
 
 ## Code Quality – SonarQube
 
-* Static analysis for:
+SonarQube provides static code analysis to ensure code quality and security:
 
+* Static analysis for:
   * Bugs
   * Vulnerabilities
   * Code smells
-* **Quality Gate** blocks pipeline on failure
-* Enforces clean & maintainable code
+* **Quality Gate** – Blocks pipeline progression on quality failures
+* Enforces clean, maintainable, and secure code standards
 
 ---
 
@@ -116,19 +116,17 @@ Jenkins Pipeline
 
 ### Trivy File System Scan
 
-* Scans source code & config files
+* Scans source code and configuration files
 * Detects:
-
   * Vulnerable dependencies
-  * Misconfigurations
+  * Security misconfigurations
 
 ### Trivy Image Scan
 
 * Scans Docker images before deployment
 * Detects:
-
   * OS-level vulnerabilities
-  * Critical & High CVEs
+  * Critical and High severity CVEs
 
 ---
 
@@ -146,7 +144,7 @@ rohitxten/expense-backend:latest
 rohitxten/expense-frontend:latest
 ```
 
-Images are built and pushed automatically via Jenkins.
+Images are automatically built and pushed via Jenkins during the CI/CD process.
 
 ---
 
@@ -170,7 +168,7 @@ VITE_API_URL=http://localhost:5000
 
 ---
 
-## Run with Docker (Recommended)
+## Deployment with Docker (Recommended)
 
 ```bash
 docker network create expense-network
@@ -189,191 +187,166 @@ docker run -d \
   rohitxten/expense-frontend:latest
 ```
 
-Access:
+---
 
-* Frontend → [http://localhost:5173](http://localhost:5173)
-* Backend → [http://localhost:5000](http://localhost:5000)
+## Jenkins Credentials Used
+
+| Credential ID         | Type               |
+| --------------------- | ------------------ |
+| `DockerHubCredential` | Username + Token   |
+| `MONGODB_URI`         | Secret Text        |
+| `Sonar`               | SonarQube Server   |
+
+---
+
+## Access Points
+
+* Frontend: http://localhost:5173
+* Backend API: http://localhost:5000
 
 ---
 
 ## API Endpoints
 
 ### Authentication
-- `POST /api/auth/register` - Register new user
-- `POST /api/auth/login` - Login user
-- `GET /api/auth/me` - Get current user
-- `PUT /api/auth/profile` - Update user profile
+- `POST /api/auth/register` – Register new user
+- `POST /api/auth/login` – Login user
+- `GET /api/auth/me` – Get current user details
+- `PUT /api/auth/profile` – Update user profile
 
 ### Expenses/Transactions
-- `GET /api/expenses` - Get all transactions
-- `POST /api/expenses` - Create transaction
-- `GET /api/expenses/:id` - Get single transaction
-- `PUT /api/expenses/:id` - Update transaction
-- `DELETE /api/expenses/:id` - Delete transaction
-- `GET /api/expenses/stats` - Get statistics
+- `GET /api/expenses` – Get all transactions
+- `POST /api/expenses` – Create transaction
+- `GET /api/expenses/:id` – Get single transaction
+- `PUT /api/expenses/:id` – Update transaction
+- `DELETE /api/expenses/:id` – Delete transaction
+- `GET /api/expenses/stats` – Get transaction statistics
 
 ### Categories
-- `GET /api/categories` - Get all categories
-- `POST /api/categories` - Create category
-- `PUT /api/categories/:id` - Update category
-- `DELETE /api/categories/:id` - Delete category
+- `GET /api/categories` – Get all categories
+- `POST /api/categories` – Create category
+- `PUT /api/categories/:id` – Update category
+- `DELETE /api/categories/:id` – Delete category
 
 ### Budgets
-- `GET /api/budgets` - Get all budgets
-- `POST /api/budgets` - Create budget
-- `GET /api/budgets/current` - Get current month budgets
-- `PUT /api/budgets/:id` - Update budget
-- `DELETE /api/budgets/:id` - Delete budget
+- `GET /api/budgets` – Get all budgets
+- `POST /api/budgets` – Create budget
+- `GET /api/budgets/current` – Get current month budgets
+- `PUT /api/budgets/:id` – Update budget
+- `DELETE /api/budgets/:id` – Delete budget
 
 ### Export
-- `GET /api/export/expenses/csv` - Export to CSV
-- `GET /api/export/expenses/json` - Export to JSON
-- `GET /api/export/expenses/pdf` - Export to PDF
-- `GET /api/export/backup` - Full backup
+- `GET /api/export/expenses/csv` – Export to CSV format
+- `GET /api/export/expenses/json` – Export to JSON format
+- `GET /api/export/expenses/pdf` – Export to PDF format
+- `GET /api/export/backup` – Full data backup
 
 ## Usage Guide
 
-### 1. First Time Setup
+### 1. Initial Setup
 
-1. **Start the application** (both backend and frontend)
-2. **Open your browser** and go to http://localhost:5173
+1. **Start the application** by running both backend and frontend services
+2. **Open your browser** and navigate to http://localhost:5173
 3. **Click "Register"** to create a new account
-4. **Fill in your details**:
-   - Name
-   - Email
+4. **Provide your details**:
+   - Full Name
+   - Email Address
    - Password
    - Preferred Currency
 
 ### 2. Adding Your First Transaction
 
-1. **Go to "Transactions"** page
-2. **Click "Add Transaction"** button
-3. **Fill in the form**:
+1. **Navigate to the "Transactions" page**
+2. **Click the "Add Transaction" button**
+3. **Complete the form**:
    - Description (e.g., "Grocery Shopping")
    - Amount (e.g., 5000)
    - Type (Income or Expense)
    - Category (select from dropdown)
-   - Date
+   - Transaction Date
    - Tags (optional)
-4. **Click "Save"**
+4. **Click "Save"** to record the transaction
 
 ### 3. Creating Categories
 
-1. **Go to "Categories"** page
+1. **Navigate to the "Categories" page**
 2. **Click "Create Category"**
-3. **Enter details**:
+3. **Enter category details**:
    - Name (e.g., "Food & Dining")
    - Type (Income or Expense)
-   - Color (pick a color)
-4. **Click "Save"**
+   - Color (select for visual identification)
+4. **Click "Save"** to create the category
 
 ### 4. Setting Up Budgets
 
-1. **Go to "Budgets"** page
+1. **Navigate to the "Budgets" page**
 2. **Click "Create Budget"**
-3. **Set budget details**:
-   - Category
-   - Amount
-   - Month & Year
-4. **Click "Save"**
-5. **Track your spending** against the budget
+3. **Configure budget parameters**:
+   - Category selection
+   - Monthly amount
+   - Month and Year
+4. **Click "Save"** to create the budget
+5. **Monitor spending** against the set budget limits
 
-### 5. Viewing Reports
+### 5. Viewing Financial Reports
 
-1. **Go to "Reports"** page
-2. **View statistics**:
+1. **Navigate to the "Reports" page**
+2. **Review comprehensive statistics**:
    - Total Income
    - Total Expenses
    - Net Savings
    - Category Breakdown
    - Monthly Trends
-3. **Export data** using CSV, JSON, or PDF buttons
+3. **Export financial data** using CSV, JSON, or PDF export options
 
-### 6. Updating Your Profile
+### 6. Updating User Profile
 
-1. **Go to "Profile"** page
-2. **Update your information**:
+1. **Navigate to the "Profile" page**
+2. **Update personal information**:
    - Name
-   - Email
+   - Email Address
    - Currency preference
-3. **Click "Save Changes"**
+3. **Click "Save Changes"** to update profile
 
 ---
 
-## Screenshots
+## Application Screenshots
 
 | Feature | Screenshot |
 |---------|-----------|
 | **Landing Page** | ![Landing Page](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/base.png) |
-| **Register** | ![Register](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/register.png) |
-| **Login** | ![Login](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/login.png) |
+| **Register Page** | ![Register](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/register.png) |
+| **Login Page** | ![Login](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/login.png) |
 | **Dashboard** | ![Dashboard](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/dashboard.png) |
 | **Expenses/Transactions** | ![Expenses](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/expenses.png) |
-| **Categories** | ![Categories](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/categories.png) |
-| **Budgets** | ![Budgets](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/budgets.png) |
-| **Reports** | ![Reports](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/reports.png) |
-| **DevSecOps** | ![WorkFlow](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/WorkFlow.png) |
-| **Profile** | ![Profile](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/profile.png) |
-| **Data(PDF)** | ![Data](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/expenses.pdf) |
-| **Data(CSV)** | ![Data](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/expenses.csv) |
-
-
----
-
-## Jenkins Credentials Used
-
-| Credential ID         | Type             |
-| --------------------- | ---------------- |
-| `DockerHubCredential` | Username + Token |
-| `MONGODB_URI`         | Secret Text      |
-| `Sonar`               | SonarQube Server |
-
----
-
-
-## Troubleshooting
-
-### Frontend not connecting to backend?
-
-* Ensure frontend is built with:
-
-```env
-VITE_API_URL=http://localhost:5000
-```
-
-### Jenkins Docker permission issue?
-
-```bash
-sudo usermod -aG docker jenkins
-sudo systemctl restart docker jenkins
-```
-
-### SonarQube not starting?
-
-```bash
-sudo sysctl -w vm.max_map_count=262144
-```
+| **Categories Management** | ![Categories](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/categories.png) |
+| **Budgets Management** | ![Budgets](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/budgets.png) |
+| **Reports and Analytics** | ![Reports](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/reports.png) |
+| **DevSecOps Pipeline** | ![WorkFlow](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/WorkFlow.png) |
+| **User Profile** | ![Profile](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/profile.png) |
+| **PDF Export** | ![Data](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/expenses.pdf) |
+| **CSV Export** | ![Data](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/expenses.csv) |
 
 ---
 
 ## Learning Resources
 
-* React – [https://react.dev](https://react.dev)
-* Node.js – [https://nodejs.org](https://nodejs.org)
-* Docker – [https://docs.docker.com](https://docs.docker.com)
-* Jenkins – [https://www.jenkins.io/doc](https://www.jenkins.io/doc)
-* SonarQube – [https://docs.sonarsource.com](https://docs.sonarsource.com)
-* Trivy – [https://aquasecurity.github.io/trivy](https://aquasecurity.github.io/trivy)
+* React – [React Documentation](https://react.dev)
+* Node.js – [Node.js Official Site](https://nodejs.org)
+* Docker – [Docker Documentation](https://docs.docker.com)
+* Jenkins – [Jenkins Documentation](https://www.jenkins.io/doc)
+* SonarQube – [SonarQube Documentation](https://docs.sonarsource.com)
+* Trivy – [Trivy Documentation](https://aquasecurity.github.io/trivy)
 
 ---
 
 ## Author
 
-**Rohit**
-DevOps • Full Stack • Cloud Enthusiast
+**Rohit**  
+DevOps Engineer | Full Stack Developer | Cloud Enthusiast
 
 ---
 
 ## Final Note
 
-This project demonstrates **real-world DevOps & Full-Stack engineering practices** and is **production-ready**, secure, and scalable.
+This project demonstrates real-world DevOps and Full-Stack engineering practices, incorporating security, automation, and scalability considerations suitable for production deployment.
