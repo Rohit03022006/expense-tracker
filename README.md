@@ -254,6 +254,7 @@ npm run dev
 | **Categories** | ![Categories](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/categories.png) |
 | **Budgets** | ![Budgets](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/budgets.png) |
 | **Reports** | ![Reports](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/reports.png) |
+| **DevSecOps** | ![WorkFlow](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/WorkFlow.png) |
 | **Profile** | ![Profile](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/profile.png) |
 | **Data(PDF)** | ![Data](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/expenses.pdf) |
 | **Data(CSV)** | ![Data](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/expenses.csv) |
