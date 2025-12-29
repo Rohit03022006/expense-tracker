@@ -96,7 +96,7 @@ Jenkins Pipeline
    ├── Trivy Image Scan
    └── Docker Deployment
 ```
-| **DevSecOps** | ![WorkFlow](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/WorkFlow.png) |
+![WorkFlow](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/WorkFlow.png) |
 
 ---
 
