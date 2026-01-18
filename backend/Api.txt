@@ -28,6 +28,6 @@ GET    /api/budgets/current - Get current month budget
 
 Export
 GET /api/export/expenses/csv - Export to CSV
-GET /api/export/expenses/json - Export to JSON
+GET /api/export/expenses/excel - Export to EXCEL
 GET /api/export/expenses/pdf - Export to PDF
 GET /api/export/backup - Full backup

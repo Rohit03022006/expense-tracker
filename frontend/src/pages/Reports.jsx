@@ -36,17 +36,13 @@ const Reports = () => {
           url = '/export/expenses/csv';
           filename = 'expenses.csv';
           break;
-        case 'json':
-          url = '/export/expenses/json';
-          filename = 'expenses.json';
+        case 'excel':
+          url = '/export/expenses/excel';
+          filename = 'expenses.xlsx';
           break;
         case 'pdf':
           url = '/export/expenses/pdf';
           filename = 'expenses.pdf';
-          break;
-        case 'backup':
-          url = '/export/backup';
-          filename = 'backup.json';
           break;
         default:
           return;
@@ -105,12 +101,12 @@ const Reports = () => {
           <Button
             variant="secondary"
             size="small"
-            onClick={() => handleExport('json')}
+            onClick={() => handleExport('excel')}
             loading={exportLoading}
             className="flex items-center space-x-2"
           >
             <FiDownload className="w-4 h-4" />
-            <span>JSON</span>
+            <span>Excel</span>
           </Button>
           
           <Button
@@ -122,17 +118,6 @@ const Reports = () => {
           >
             <FiDownload className="w-4 h-4" />
             <span>PDF</span>
-          </Button>
-          
-          <Button
-            variant="secondary"
-            size="small"
-            onClick={() => handleExport('backup')}
-            loading={exportLoading}
-            className="flex items-center space-x-2"
-          >
-            <FiDownload className="w-4 h-4" />
-            <span>Backup</span>
           </Button>
         </div>
       </div>

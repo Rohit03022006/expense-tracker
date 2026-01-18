@@ -34,6 +34,10 @@ export default {
           light: '#3B82F6',
           dark: '#0284C7',
         },
+        button: {
+          primary: '#0EA5E9',
+          secondary: '#E2E8F0',
+        },
         
         dark: {
           background: '#1E293B',

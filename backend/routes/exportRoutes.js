@@ -1,10 +1,10 @@
 const express = require('express');
 const {
   exportToCSV,
-  exportToJSON,
+
+  exportToExcel,
   exportToPDF,
   exportFinancialReport,
-  exportBackup
 } = require('../utils/exportData');
 const { protect } = require('../middleware/authMiddleware');
 
@@ -37,6 +37,22 @@ router.get('/expenses/json', async (req, res) => {
     res.send(result.data);
   } catch (error) {
     console.error('Export JSON Error:', error);
+    res.status(500).json({
+      success: false,
+      message: error.message
+    });
+  }
+});
+
+router.get('/expenses/excel', async (req, res) => {
+  try {
+    const result = await exportToExcel(req.user.id, req.query);
+    
+    res.setHeader('Content-Type', result.contentType);
+    res.setHeader('Content-Disposition', `attachment; filename=${result.filename}`);
+    res.send(result.data);
+  } catch (error) {
+    console.error('Export Excel Error:', error);
     res.status(500).json({
       success: false,
       message: error.message

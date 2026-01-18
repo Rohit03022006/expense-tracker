@@ -236,10 +236,16 @@ docker run -d \
 - `DELETE /api/budgets/:id` – Delete budget
 
 ### Export
+<<<<<<< HEAD
 - `GET /api/export/expenses/csv` – Export to CSV format
 - `GET /api/export/expenses/json` – Export to JSON format
 - `GET /api/export/expenses/pdf` – Export to PDF format
 - `GET /api/export/backup` – Full data backup
+=======
+- `GET /api/export/expenses/csv` - Export to CSV
+- `GET /api/export/expenses/excel` - Export to EXCEL
+- `GET /api/export/expenses/pdf` - Export to PDF
+>>>>>>> 77ce00b (Refactor code structure for improved readability and maintainability)
 
 ## Usage Guide
 

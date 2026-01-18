@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useAuth } from '../../context/AuthContext';
-import { FiMenu, FiX, FiLogOut, FiDollarSign } from 'react-icons/fi';
+import React, { useState } from "react";
+import { useAuth } from "../../context/AuthContext";
+import { FiMenu, FiX, FiLogOut, FiDollarSign } from "react-icons/fi";
 
 const Header = ({ onMenuToggle }) => {
   const { user, logout } = useAuth();
@@ -17,11 +17,12 @@ const Header = ({ onMenuToggle }) => {
             >
               <FiMenu className="w-6 h-6" />
             </button>
-            
+
             <div className="flex items-center space-x-2">
-              <FiDollarSign className="text-xl sm:text-2xl text-info" />
               <h1 className="text-lg sm:text-xl lg:text-2xl font-bold text-info">
-                <span className="hidden sm:inline">ExpenseTracker</span>
+                <div className="flex items-center text-info font-bold text-xl">
+                  <FiDollarSign className="mr-2 text-2xl" /> ExpenseTracker
+                </div>
                 <span className="sm:hidden">ET</span>
               </h1>
             </div>
@@ -32,13 +33,13 @@ const Header = ({ onMenuToggle }) => {
               <p className="text-sm font-medium text-text-primary">
                 {user?.name}
               </p>
-              <p className="text-xs text-text-secondary">
-                {user?.email}
-              </p>
+              <p className="text-xs text-text-secondary">{user?.email}</p>
             </div>
-            
+
             <div className="flex items-center space-x-2 bg-border px-2 lg:px-3 py-1 rounded-lg">
-              <span className="text-xs lg:text-sm text-text-secondary">Currency:</span>
+              <span className="text-xs lg:text-sm text-text-secondary">
+                Currency:
+              </span>
               <span className="text-xs lg:text-sm font-semibold text-text-primary">
                 {user?.currency}
               </span>
@@ -46,10 +47,10 @@ const Header = ({ onMenuToggle }) => {
 
             <button
               onClick={logout}
-              className="flex items-center space-x-2 bg-border hover:bg-text-secondary/20 text-text-primary px-3 lg:px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
+              className="flex items-center space-x-2 bg-red-600 hover:bg-red-700 text-text-primary px-3 lg:px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
             >
               <FiLogOut className="w-4 h-4" />
-              <span className="hidden lg:inline">Logout</span>
+              <span className="hidden lg:inline ">Logout</span>
             </button>
           </div>
 
@@ -65,15 +66,19 @@ const Header = ({ onMenuToggle }) => {
 
             {showUserMenu && (
               <>
-                <div 
-                  className="fixed inset-0 z-40" 
+                <div
+                  className="fixed inset-0 z-40"
                   onClick={() => setShowUserMenu(false)}
                 />
                 <div className="absolute right-0 mt-2 w-64 bg-card rounded-lg shadow-lg border border-border py-2 z-50">
                   <div className="px-4 py-3 border-b border-border">
-                    <p className="text-sm font-medium text-text-primary">{user?.name}</p>
+                    <p className="text-sm font-medium text-text-primary">
+                      {user?.name}
+                    </p>
                     <p className="text-xs text-text-secondary">{user?.email}</p>
-                    <p className="text-xs text-text-secondary mt-1">Currency: {user?.currency}</p>
+                    <p className="text-xs text-text-secondary mt-1">
+                      Currency: {user?.currency}
+                    </p>
                   </div>
                   <button
                     onClick={() => {
