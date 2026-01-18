@@ -60,15 +60,15 @@ router.get('/expenses/excel', async (req, res) => {
   }
 });
 
-router.get('/expenses/pdf', async (req, res) => {
+router.get('/expenses/excel', async (req, res) => {
   try {
-    const result = await exportToPDF(req.user.id, req.query);
+    const result = await exportToExcel(req.user.id, req.query);
     
     res.setHeader('Content-Type', result.contentType);
     res.setHeader('Content-Disposition', `attachment; filename=${result.filename}`);
     res.send(result.data);
   } catch (error) {
-    console.error('Export PDF Error:', error);
+    console.error('Export Excel Error:', error);
     res.status(500).json({
       success: false,
       message: error.message

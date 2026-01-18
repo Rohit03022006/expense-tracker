@@ -4,6 +4,7 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const path = require('path');
 
+
 const errorHandler = require('./middleware/errorMiddleware');
 
 dotenv.config();
@@ -14,7 +15,10 @@ const categoryRoutes = require('./routes/categoryRoutes');
 const budgetRoutes = require('./routes/budgetRoutes');
 const exportRoutes = require('./routes/exportRoutes');
 
+
 const app = express();
+
+const _dirname = path.resolve();
 
 const corsOptions = {
   origin: function (origin, callback) {
@@ -103,7 +107,7 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log(`MongoDB Connected Successfully`);
+    // console.log(`MongoDB Connected Successfully`);
   } catch (error) {
     console.error('Database connection error:', error.message);
     process.exit(1);
@@ -122,14 +126,22 @@ process.on('uncaughtException', (err) => {
 
 const PORT = process.env.PORT || 5000;
 
+app.use(express.static(path.join(__dirname, '/frontend/dist')));
+
+app.use((req, res) => {
+  res.sendFile(
+    path.join(__dirname, 'frontend/dist/index.html')
+  );
+});
+
 connectDB().then(() => {
   app.listen(PORT, () => {
-    console.log(`Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
-    console.log(`API Documentation: http://localhost:${PORT}/`);
-    console.log(`Health check: http://localhost:${PORT}/api/health`);
-    console.log(`Frontend: ${process.env.FRONTEND_URL}`);
-    console.log(`CORS configured for: ${process.env.FRONTEND_URL}`);
-    console.log(`Backend ready!`);
+    // console.log(`Server running in ${process.env.NODE_ENV || 'development'} mode on port ${PORT}`);
+    // console.log(`API Documentation: http://localhost:${PORT}/`);
+    // console.log(`Health check: http://localhost:${PORT}/api/health`);
+    // console.log(`Frontend: ${process.env.FRONTEND_URL}`);
+    // console.log(`CORS configured for: ${process.env.FRONTEND_URL}`);
+    // console.log(`Backend ready!`);
   });
 }).catch(err => {
   console.error('Failed to start server:', err);
