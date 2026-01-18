@@ -4,9 +4,8 @@
   "description": "Full-stack Expense Tracker Application",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"nodemon backend/server.js\" \"npm run dev --prefix frontend\"",
-    "build": "npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "node backend/server.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "keywords": [
     "expense-tracker",
