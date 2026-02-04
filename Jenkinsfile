@@ -73,7 +73,7 @@ pipeline {
                     docker push rohitxten/expense-backend:latest
 
                     docker build \
-                      --build-arg VITE_API_URL=http://localhost:5000/api \
+                      --build-arg VITE_API_URL=/api \
                       -t rohitxten/expense-frontend:latest ./frontend
                     docker push rohitxten/expense-frontend:latest
                     '''

@@ -4,7 +4,7 @@ services:
   backend:
     build: ./backend
     image: rohitxten/expense-backend
-    container_name: expense_backend
+    container_name: expense-backend
     env_file:
       - ./backend/.env
     ports:
@@ -16,7 +16,7 @@ services:
   frontend:
     build: ./frontend
     image: rohitxten/expense-frontend
-    container_name: expense_frontend
+    container_name: expense-frontend
     env_file:
       - ./frontend/.env
     ports:
