@@ -64,6 +64,7 @@ ExpenseTracker is a full-stack personal finance management application designed 
 ---
 
 ## CI/CD Pipeline Overview
+![WorkFlow](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/WorkFlow.png)
 
 The Jenkins pipeline automates the complete application lifecycle through the following stages:
 
@@ -95,7 +96,7 @@ Jenkins Pipeline
    ├── Docker Deployment
    └── Nginx
 ```
-![WorkFlow](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/WorkFlow.png)
+
 
 ---
 
@@ -236,7 +237,7 @@ docker run -d \
 - `DELETE /api/budgets/:id` – Delete budget
 
 ### Export
-
+<<<<<<< HEAD
 - `GET /api/export/expenses/csv` – Export to CSV format
 - `GET /api/export/expenses/json` – Export to JSON format
 - `GET /api/export/expenses/pdf` – Export to PDF format
