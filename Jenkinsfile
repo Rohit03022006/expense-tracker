@@ -143,8 +143,18 @@ pipeline {
 
         always {
             sh 'docker logout || true'
+
             archiveArtifacts artifacts: '**/*report.html', allowEmptyArchive: true
             archiveArtifacts artifacts: '**/dependency-check-report.*', allowEmptyArchive: true
+
+            emailext(
+                subject: "Jenkins Build: ${currentBuild.currentResult}",
+                body: "Build ${currentBuild.currentResult}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                to: "kumarrohit67476@gmail.com",
+                attachLog: true,
+                attachmentsPattern: '**/*.html'
+            )
         }
     }
+    
 }
