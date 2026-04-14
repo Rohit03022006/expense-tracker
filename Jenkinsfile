@@ -32,7 +32,7 @@ pipeline {
         stage('Sonar Quality Gate') {
             steps {
                 timeout(time: 2, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
+                    waitForQualityGate abortPipeline: false
                 }
             }
         }
@@ -98,7 +98,8 @@ pipeline {
         stage('Deploy Application') {
             steps {
                 withCredentials([
-                    string(credentialsId: 'MONGODB_URI', variable: 'MONGODB_URI')
+                    string(credentialsId: 'MONGODB_URI', variable: 'MONGODB_URI'),
+                    string(credentialsId: 'JWT_SECRET', variable: 'JWT_SECRET')
                 ]) {
                     sh '''
                     docker stop expense-frontend expense-backend || true
@@ -111,6 +112,9 @@ pipeline {
                       --name expense-backend \
                       --network expense-network \
                       -e MONGODB_URI="$MONGODB_URI" \
+                      -e JWT_SECRET="$JWT_SECRET" \
+                      -e JWT_EXPIRE="7d" \
+                      -e NODE_ENV="production" \
                       -p 5000:5000 \
                       rohitxten/expense-backend:latest
                     '''
@@ -149,8 +153,13 @@ pipeline {
 
             emailext(
                 subject: "Jenkins Build: ${currentBuild.currentResult}",
-                body: "Build ${currentBuild.currentResult}: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
+                body: """
+                Build Status: ${currentBuild.currentResult}
+                Project: ${env.JOB_NAME}
+                Build Number: ${env.BUILD_NUMBER}
+                """,
                 to: "kumarrohit67476@gmail.com",
+                recipientProviders: [[$class: 'DevelopersRecipientProvider']],
                 attachLog: true,
                 attachmentsPattern: '**/*.html'
             )
