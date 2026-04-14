@@ -64,6 +64,8 @@ ExpenseTracker is a full-stack personal finance management application designed 
 ---
 
 ## CI/CD Pipeline Overview
+
+### CI/CD Architecture
 ![WorkFlow](https://github.com/Rohit03022006/expense-tracker/blob/master/Screenshots/WorkFlow.png)
 
 The Jenkins pipeline automates the complete application lifecycle through the following stages:
@@ -81,21 +83,6 @@ The Jenkins pipeline automates the complete application lifecycle through the fo
 9. **Deploy Application using Docker** – Automated deployment
 
 ---
-
-## CI/CD Architecture
-
-```
-GitHub
-   ↓
-Jenkins Pipeline
-   ├── SonarQube (Code Quality)
-   ├── OWASP Dependency Check
-   ├── Trivy FS Scan
-   ├── Docker Build
-   ├── Trivy Image Scan
-   ├── Docker Deployment
-   └── Nginx
-```
 
 
 ---
