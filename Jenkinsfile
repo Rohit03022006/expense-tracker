@@ -32,7 +32,7 @@ pipeline {
         stage('Sonar Quality Gate') {
             steps {
                 timeout(time: 2, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: false
+                    waitForQualityGate abortPipeline: true
                 }
             }
         }
@@ -152,16 +152,14 @@ pipeline {
             archiveArtifacts artifacts: '**/dependency-check-report.*', allowEmptyArchive: true
 
             emailext(
-                subject: "Jenkins Build: ${currentBuild.currentResult}",
+                subject: "Build: ${currentBuild.currentResult}",
                 body: """
                 Build Status: ${currentBuild.currentResult}
-                Project: ${env.JOB_NAME}
-                Build Number: ${env.BUILD_NUMBER}
+                Job: ${env.JOB_NAME}
+                Build: ${env.BUILD_NUMBER}
                 """,
                 to: "kumarrohit67476@gmail.com",
-                recipientProviders: [[$class: 'DevelopersRecipientProvider']],
-                attachLog: true,
-                attachmentsPattern: '**/*.html'
+                attachLog: true
             )
         }
     }
